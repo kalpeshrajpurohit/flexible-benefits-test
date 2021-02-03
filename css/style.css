@@ -207,3 +207,25 @@ input:-moz-placeholder {
 #checkout{
   margin-bottom: 2rem;
 }
+
+.planName{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.planName p{
+  text-orientation: mixed;
+  font-weight: 600;
+  font-size: 21px;
+  writing-mode: vertical-rl;
+  margin: 0;
+}
+
+
+@media only screen and (min-width: 320px) and (max-width: 767px){
+  .planName p{
+    writing-mode: horizontal-tb;
+  }
+}
