@@ -8,13 +8,20 @@
   let useAmount = $('#usedAmoutFromWallet')
   let wallatAvailbleAmout = $('#wallatAvailbleAmout')
   let extraPay = $('#extraPay')
-  $('.result_table').hide(); 
- 
-  let getPriceCard = (cardPrice,count,multiplier,countTotal)=>{
+  let multiplierValue  = $('.multiplierValue');
+  let healthMulti =  $('#healthMulti')
+  let lifeMulti =  $('#lifeMulti')
+  let accidentMulti = $('#accidentMulti')
+  $('.result_table').hide()
+  let getPriceCard = (cardPrice,count,multiplier,countTotal,multiValue)=>{
     
     let SelectCardPrice = $(cardPrice).find('.top-price p').text()
+
+    let selectMultipleValue = $(cardPrice).find('.multiplierValue').text()
+    $(multiValue).text(selectMultipleValue)
+
     count.text(SelectCardPrice);
-      countTotal.text(SelectCardPrice * multiplier);
+      countTotal.text(SelectCardPrice * selectMultipleValue);
       let gethealthTotal = parseInt($(healthCountTotal).text());
       let getlifeCountTotal =  parseInt($(lifeCountTotal).text());
       let getaccidentCountTotal = parseInt($(accidentCountTotal).text());
@@ -25,18 +32,19 @@
       if(wallatAvailbleAmout.text() < 0){
         $(wallatAvailbleAmout).text(0)
       }
-      switch(true){
-        case finalTotalAmount > 1400:
-        $(extraPay).text(finalTotalAmount - 1400)
-        default:
-        console.log('fasd') 
+      let extraPayamount = finalTotalAmount - 1400
+      if(finalTotalAmount > 1400){
+        $(extraPay).text(extraPayamount)
+      }
+      else{
+       $(extraPay).text(0) 
       }
 }
 
 
 
     $('.lifeCard').click(function(){
-      getPriceCard(this,lifeCount,1,lifeCountTotal)
+      getPriceCard(this,lifeCount,this,lifeCountTotal,lifeMulti)
       $('.lifeCard').find('input').attr('checked', false).triggerHandler('click');
       $(this).find('input').attr('checked', true).triggerHandler('click');
       $('.lifeCard').removeClass('activeCard')
@@ -45,7 +53,7 @@
 
     $('.healthCard').click(function(){
       $('.healthCard').find('input').attr('checked', false).triggerHandler('click');
-      getPriceCard(this,healthCount,2,healthCountTotal)
+      getPriceCard(this,healthCount,this,healthCountTotal,healthMulti)
       $(this).find('input').attr('checked', true).triggerHandler('click');
       $('.healthCard').removeClass('activeCard')
       $(this).addClass('activeCard')
@@ -54,7 +62,7 @@
     
     $('.accidenCard').click(function(){
       $('.accidenCard').find('input').attr('checked', false).triggerHandler('click');
-      getPriceCard(this,accidentCount,1,accidentCountTotal)
+      getPriceCard(this,accidentCount,multiplierValue,accidentCountTotal,accidentMulti)
       $(this).find('input').attr('checked', true).triggerHandler('click');
       $('.accidenCard').removeClass('activeCard')
       $(this).addClass('activeCard')
@@ -65,6 +73,23 @@
        let pdfHelth = $(healthCount).text();
        let pdflife = $(lifeCount).text();
        let pdfaccident = $(accidentCount).text();
+
+
+       let  Pdfhealtmulti = $(healthMulti).text()
+       let  Pdflifemulti = $(lifeMulti).text()
+       let  Pdfacciendmulti = $(accidentMulti).text()
+ 
+       // Pdfhealtmulti
+       // Pdflifemulti
+       // Pdfacciendmulti
+
+       $('#Pdfhealtmulti').text(Pdfhealtmulti)
+       $('#Pdflifemulti').text(Pdflifemulti)
+       $('#Pdfacciendmulti').text(Pdfacciendmulti)
+
+
+
+
        $('#PdfhealtCount').text(pdfHelth)
        $('#PdflifeCount').text(pdflife)
        $('#PdfacciendCount').text(pdfaccident)
