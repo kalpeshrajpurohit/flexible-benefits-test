@@ -4,40 +4,29 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-
-
 .healthCard,.lifeCard,.accidenCard{
     text-align: center;
 }
-
 .box-footer{
     display: flex;
     justify-content: space-between;
 }
-
-
 h1{
   color: blue;
   text-align: center;
 }
-
 .box-content,.box-content_second{
         text-align: center;
     border: 1px solid red;
     padding: 0px 8px;
 }
-
 .box-footer,.box-content_second{
     display: flex;
     justify-content: space-between;
 }
-/**/
-
-/**/
 body::-webkit-scrollbar {
   width: 6px;
 }
-
 body::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
