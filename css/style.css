@@ -83,11 +83,9 @@ input:-moz-placeholder {
 .pdfTable tbody tr td:last-child{
   border-right: unset;
 }
-
 .pdfTable tbody tr td{
   color: #212121;
 }
-
 .card-box{
   box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
   padding: 0px 12px 7px 12px;
@@ -97,13 +95,11 @@ input:-moz-placeholder {
   background: #fff;
   margin-bottom: 2.5rem;
 }
-
 .card-box:hover{
   transform: translate(0px,-11px);
   position: relative;
   z-index: 1;
 }
-
 .card-box .top-price p{
     margin: 0;
     background: #534666;
@@ -113,20 +109,16 @@ input:-moz-placeholder {
     font-size: 17px;
     border-radius: 3px;
 }
-
 .card-box p{
     margin: 18px 0px;
     color: #212121;
     font-size: 18px;
     font-weight: 500;
 }
-
 .box-footer p{
   margin: 0;
   font-size: 16px;
 }
-
-
 .wallat_allocation h2{
     background: #6e14cc;
     color: #fff;
@@ -136,7 +128,6 @@ input:-moz-placeholder {
     border-radius: 5px;
     margin-bottom: 2rem;
 }
-
 .wallat_allocationTable thead tr:first-child th{
     background: #534666;
     color: #fff;
@@ -144,12 +135,10 @@ input:-moz-placeholder {
     border-bottom: 1px solid #015385;
     border-right: 1px solid #015385;
 }
-
 .wallat_allocationTable thead tr:last-child th,
 .wallat_allocationTable tfoot tr td:last-child {
   border-right: 0;
 }
-
 .btnCustome{
     border: 0;
     outline: none;
@@ -163,47 +152,38 @@ input:-moz-placeholder {
     font-weight: 500;
     box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
 }
-
 .btnCustome:hover{
   box-shadow: unset;
 }
-
 .heading{
     padding: 2rem 0rem 2rem 0rem;
     font-size: 29px;
     color: #6e14cc;
     font-weight: 600;
 }
-
 .result_table{
     margin-top: 4rem;
     margin-bottom: 4rem;
 }
-
 .activeCard{
     transform: scale(1.1);
     background: #eee;
 }
-
 .activeCard:hover{
    transform: scale(1.1);
 }
-
 .checkoutTable{
   margin-top: 3rem;
 }
-
 #checkout{
   margin-bottom: 2rem;
 }
-
 .planName{
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 2.5rem;
 }
-
 .planName p{
   text-orientation: mixed;
   font-weight: 600;
@@ -211,8 +191,6 @@ input:-moz-placeholder {
   writing-mode: vertical-rl;
   margin: 0;
 }
-
-
 @media only screen and (min-width: 320px) and (max-width: 767px){
   .planName p{
     writing-mode: horizontal-tb;
